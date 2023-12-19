@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const blogPostSchema = require('../../BlogPostResources/blogPostModel')
+const blogPostSchema = require('../../models/BlogPostResources/blogPostModel')
 
 router.get('/', async (req, res) =>   { 
     res.send(200).json({msg: "hit this endpoint :) "});
