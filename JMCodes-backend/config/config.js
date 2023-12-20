@@ -3,7 +3,7 @@
  * 
  */
 
-require('../models/BlogPostResources/node_modules/dotenv/lib/main').config();
+require('dotenv').config();
 
 /************************************** * 
 * DATABASE SERVER CONFIGURATIONS

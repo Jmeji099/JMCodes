@@ -1,5 +1,4 @@
 //Imports
-require('./models/BlogPostResources/node_modules/dotenv/lib/main').config()
 const express = require("express");
 const app = express()
 app.use(express.json())

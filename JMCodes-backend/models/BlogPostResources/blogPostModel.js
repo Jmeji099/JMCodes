@@ -8,6 +8,14 @@ const blogPostSchema = new mongoose.Schema({
     author : {
         type: String,
         require: true
+    },
+    content: {
+        type: String,
+        require: true
+    },
+    publishedOn: {
+        type: Date,
+        require: false
     }
 });
 
