@@ -54,8 +54,8 @@ router.post('/', async (req, res) => {
         const post = await newPost.save();
         res.sendStatus(201).json(post);
         return;
-    } catch {
-        res.sendStatus(400).json({msg: "Unable to save the blog post"}); 
+    } catch (err) {
+        res.json({msg: "Unable to save the blog post"}).sendStatus(400); 
         return;
     }
 });
@@ -73,8 +73,9 @@ router.post('/', async (req, res) => {
  * Deletes a given post by id
  */
 router.delete('/:id', async (req, res) => {
-    id = req.params.id;
-    res.status(200).json({mgs: `Deleted the blog post with id ${id}`})
+    requested_id = req.params.id;
+    let respone = await blogPostSchema.deleteOne({ _id:requested_id})
+    res.status(200).json({mgs: `Deleted the blog post with id ${requested_id}`})
 });
 
 module.exports = router;
