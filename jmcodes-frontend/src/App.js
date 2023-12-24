@@ -1,11 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
+import NavigationBar from './components/NavigationBar';
+import MainContent from './components/MainContent';
 
 function App() {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+    <main className='bg-slate-200 h-screen w-screen'>
+      <NavigationBar /> 
+      <MainContent />
+    </main>
   );
 }
 
