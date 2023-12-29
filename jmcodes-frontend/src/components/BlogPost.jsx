@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 function BlogPost(props) {
     const postInfo = props.post;
