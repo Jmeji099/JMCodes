@@ -1,11 +1,10 @@
 import React from 'react'
-import { getRequest} from '../config/axiosConfig'
 import {
     useState,
     useEffect
 } from 'react';
-
 import BlogPost from './BlogPost';
+import {getRequest} from '../../../config/axiosConfig';
 
 function BlogPostOverview() {
 
@@ -22,7 +21,10 @@ function BlogPostOverview() {
             console.log(err);
         }
     }
- 
+    const handleOpenBlogPost = (postId) => {
+        console.log("GOING TO THIS BLOG POST");
+    }
+
     useEffect(()=> {
         getAllBlogPosts() 
     }, []);

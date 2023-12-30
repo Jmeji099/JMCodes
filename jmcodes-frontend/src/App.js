@@ -1,14 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
-import NavigationBar from './components/NavigationBar';
-import MainContent from './components/MainContent';
+import Layout from './components/Layout';
 
 function App() {
   return (
-    <main className='bg-slate-200 h-screen w-screen'>
-      <NavigationBar /> 
-      <MainContent />
-    </main>
+    <>
+      <Layout />
+    </>
   );
 }
 
