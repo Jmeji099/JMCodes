@@ -3,9 +3,9 @@ import  BlogPostOverview from './components/BlogPostOverview';
 
 function Home () {
   return (
-    <>
+    <div>
         <BlogPostOverview />
-    </>
+    </div>
   )
 }
 

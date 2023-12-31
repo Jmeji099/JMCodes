@@ -1,9 +1,17 @@
-import React, { useEffect } from 'react'
+import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
 function BlogPost(props) {
-    const postInfo = props.post;
-    return (
-    <div className="p-10 bg-white mb-5 ml-5 mr-5 rounded-lg">
+  const Navigate = useNavigate();
+  
+  const handleBlogPostClick = (id) =>  {
+    const url = `/blogposts/${id}`; 
+    Navigate(url); 
+  }
+
+  const postInfo = props.post;
+  return (
+    <div className="mt-4 p-10 bg-white mb-4 ml-5 mr-5 rounded-lg" onClick={() => handleBlogPostClick(postInfo._id)}>
         <h1>Title: {postInfo.title}</h1>
         <p>
             Author: {postInfo.author}

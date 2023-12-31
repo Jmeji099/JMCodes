@@ -6,7 +6,7 @@ import {
 
 function NavigationBar() {
   return (
-    <div className='fixed top-0 left-0 w-full z-50'>
+    <div className='fixed top-0 left-0 w-full z-50 h-[50px]'>
         <div className='flex flex-row p-5 bg-slate-500 text-white' >
             {/*  Add logo Here*/}
             <span className='font-bold text-2xl'> JM</span><span className='text-2xl'>CODES [Blog]</span>

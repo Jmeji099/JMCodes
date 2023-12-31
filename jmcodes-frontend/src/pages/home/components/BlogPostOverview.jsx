@@ -5,9 +5,10 @@ import {
 } from 'react';
 import BlogPost from './BlogPost';
 import {getRequest} from '../../../config/axiosConfig';
+import { useNavigate } from 'react-router-dom';
 
 function BlogPostOverview() {
-
+    const Navigate = useNavigate();
     const [blogPosts, setBlogPost] = useState([]);
     
     const getAllBlogPosts = async()  => {
@@ -21,16 +22,13 @@ function BlogPostOverview() {
             console.log(err);
         }
     }
-    const handleOpenBlogPost = (postId) => {
-        console.log("GOING TO THIS BLOG POST");
-    }
 
     useEffect(()=> {
         getAllBlogPosts() 
     }, []);
 
     return ( 
-        <>
+        <div>
         {blogPosts.map((post, index) => { 
             return (
                 <div key={index}>
@@ -38,7 +36,7 @@ function BlogPostOverview() {
                 </div>
             )
         })}
-        </>
+        </div>
     )
 }
 

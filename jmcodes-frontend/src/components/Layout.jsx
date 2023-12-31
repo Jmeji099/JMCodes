@@ -5,11 +5,13 @@ import {AppRouter} from "../AppRouter";
 
 function Layout (){ 
   return (
-    <>
+    <div className="bg-slate-200">
       <NavigationBar />
-      <AppRouter />
+      <div>
+        <AppRouter/>
+      </div>
       <Footer />
-    </>
+    </div>
   )
 } 
 
