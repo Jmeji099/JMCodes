@@ -8,6 +8,7 @@ export const getRequest = (endpoint) =>  {
     return axios.get(`${BASEURL}${endpoint}`);
 };
 
-export const postRequest = (endpoint, data) => {
+export const postRequest = (endpoint, header,data) => {
+
     return axios.post(`${BASEURL}${endpoint}`, data);
 };

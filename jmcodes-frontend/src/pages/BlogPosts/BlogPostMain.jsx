@@ -20,7 +20,7 @@ export const BlogPostMain = (props) => {
   }, [])
 
   return (
-      <div className="flex flex-col justify-center content-center">
+      <div className="flex flex-col content-center w-screen h-screen">
         <div className="text-3xl">
           {content.title}
         </div> 

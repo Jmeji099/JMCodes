@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router,Routes, Route, useParams } from "react-router-dom";
 import Home from "./pages/home/Home";
 import { BlogPostMain } from "./pages/BlogPosts/BlogPostMain";
+import { Upload } from "./pages/upload/Upload";
 
 const BlogPost = () => {
   const idParam = useParams();
@@ -21,6 +22,7 @@ export const AppRouter = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/blogposts/:id" element={<BlogPost />}/>
+          <Route path="/upload/" element={<Upload />} />
         </Routes> 
       </Router>
     </div>
